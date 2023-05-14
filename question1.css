@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body
+{
+  background: linear-gradient(#2b1055,#7597de);
+}
+section
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  scroll-behavior: smooth;
+}
+header .logo
+{
+  transition: all 3s;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.sym
+{
+  position: absolute;
+  top: 50;
+  height: auto;
+  left:40px;
+  width:50px;
+  height: 25px;
+  border-radius: 6px;
+  float:inherit;
+  object-fit: cover;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  scroll-behavior: smooth;
+}
+.bridge {
+  position: absolute;
+  z-index:4;
+  width:500px;
+  height:3px;
+  right: 250px;
+  top:-180px;
+  border-bottom: 5px solid #333;
+  border-top: 2px solid #333;
+}
+
+.bridge:after, .bridge:before {
+  content:"";
+  position: absolute;
+  background-color: #333;
+}
+.trainAnimation {
+  position: relative;
+}
+.bridge:before {
+  width:2px;
+  height:5px;
+  left:60px;
+  box-shadow:110px 0px #333,160px 0px #333,270px 0px #333,320px 0px #333;
+}
+
+.bridge:after {
+  width:15px;
+  height:150px;
+  left:110px;
+  box-shadow: 160px 0 #333;
+}
+.train {
+  position: absolute;
+  z-index:3;
+  top:-165px;
+  animation: move 5s linear infinite;
+}
+
+.carOne {
+  position: absolute;
+  width: 100px;
+  height:30px;
+  background-color: #969191;
+  left:220px;
+  top:-50px;
+  border-radius: 0 30px 0 0;
+  overflow:hidden;
+  box-shadow: inset 0 -5px #a19696;
+}
+
+.carOne:before {
+  content:"";
+  position: absolute;
+  width: 40px;
+  height: 15px;
+  background-color: #170e1c;
+  top:5px;
+  left:60px;
+}
+
+.carOne:after {
+  content:"";
+  position: absolute;
+  background-color: #170e1c;
+  width:40px;
+  height:7px;
+  left:10px;
+  top:10px;
+}
+
+.carTwo {
+  position: absolute;
+  height: 30px;
+  width:90px;
+  background-color: #969191;
+  left:125px;
+  top:-50px;
+  box-shadow: inset 0 -5px #a19696;
+}
+
+.carTwo:before {
+  content:"";
+  position: absolute;
+  background-color: #170e1c;
+  width:30px;
+  height:7px;
+  top:10px;
+  left:10px;
+  box-shadow: 40px 0px #0d0915;
+}
+
+.carTwo:after {
+  position: absolute;
+  content:"";
+  background-color: #170e1c;
+  border-radius:50%;
+  width:10px;
+  height:10px;
+  top:30px;
+  left:180px;
+  box-shadow:-20px 0 #210405,-40px 0 #210405,-60px 0 #210405,-80px 0 #210405,-100px 0 #210405,-120px 0 #210405,-140px 0 #210405,-160px 0 #210405,-180px 0 #210405,-200px 0 #210405,-220px 0 #210405,-240px 0 #210405,-260px 0 #210405,-280px 0 #210405;
+}
+
+
+.carThree {
+  position: absolute; 
+  width: 100px;
+  height:30px;
+  background-color: #969191;
+  border-radius: 30px 0 0 0;
+  overflow:hidden;
+  box-shadow: inset 0 -5px #a19696;
+  left:20px;
+  top:-50px;
+}
+
+.carThree:before {
+  content:"";
+  position: absolute;
+  background-color: #170e1c;
+  width: 40px;
+  height: 15px;
+  top:5px;
+}
+
+.carThree:after {
+  content:"";
+  position: absolute;
+  background-color: #170e1c;
+  width:40px;
+  height:7px;
+  top:10px;
+  left:50px;
+}
+@keyframes move {
+	from{left:-170px;}
+	to{left:100%}
+}
+header ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+header ul li
+{
+  list-style: none;
+  margin-left: 20px;
+  scroll-behavior: smooth;
+}
+header ul li a
+{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+header ul li a.active,
+header ul li a:hover
+{
+  background: #fff;
+  color: #2b1055;
+}
+section:before
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top,#1c0522,transparent);
+  z-index: 1000;
+  scroll-behavior: smooth;
+}
+
+section img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+section img#moon
+{
+  mix-blend-mode: screen;
+}
+section img#mountains_front
+{
+  z-index: 10;
+}
+h2#text
+{
+  position: absolute;
+  color: #0f0a17;
+  right: -350px;
+  white-space: nowrap;
+  font-size: 3vw;
+  transform: translateY(-150px);
+}
+#btn
+{
+  text-decoration: none;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  transform:translateX(25px);
+  font-size: 1em;
+  z-index: 9;
+}
+.abt
+{
+  position: relative;
+  min-height: 500px;
+  padding: 100px;
+  background: #1c0522;
+}
+.abt h2
+{
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.abt p
+{
+  transition: all 1s;
+  font-size: 1.2em;
+  color: #fff;
+}
+.vis
+{
+  position: relative;
+  min-height: 500px;
+  padding: 100px;
+  background: #1c0522;
+}
+.vis h2
+{
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.vis p
+{
+  font-size: 1.2em;
+  color: #fff;
+}
+.work
+{
+  position: relative;
+  min-height: 500px;
+  padding: 100px;
+  background: #1c0522;
+}
+.work h2
+{
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.work p
+{
+  font-size: 1.2em;
+  color: #fff;
+}
+.tm {
+  scale:90%;
+  right:10px;
+}
+.prg
+{
+ float:right;
+ padding: 150px 30px;
+}
+.pm {
+  scale:80%;
+  float:right;
+  padding: 10px 30px;
+}
+.prg1
+{
+ float:right;
+ padding: 10px 30px;
+}
+.pm1 {
+  scale:90%;
+  float :left;
+  padding: 10px 90px;
+}
+.prg1
+{
+ float:right;
+ padding: 90px 30px;
+}
+.contact
+{
+  padding:10px,80px;
+}
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+.gotopbtn{
+  position:fixed;
+  width: 50px;
+  height: 50px;
+  background-color: #7597de;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+}
